@@ -2,7 +2,7 @@
 import { Jugador } from "./jugador.js";
 import { Humano } from "./humano.js";
 import { Maquina } from "./maquina.js";
-import { Extr } from "./jugador.js";
+import { Extraterrestre } from "./extraterrestre.js";
 
 // The Fisher-Yates algorithm for shuffling an array
 const shuffleArray = array => {
@@ -16,9 +16,13 @@ const shuffleArray = array => {
 
 // Inicializar un único array con 50 maquinas, 50 humanos y 50 extraterrestres
 let campo = []
+for (let i = 1; i<=50; i++){
+    campo.push(new Humano("h"+i));
+}
 
 // Ordenar los elementos del array al azar
 
+campo.shuffleArray;
 
 // Imprimir el campo
 console.log(campo)

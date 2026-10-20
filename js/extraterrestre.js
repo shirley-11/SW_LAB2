@@ -1,6 +1,6 @@
 import { Jugador } from "./jugador.js";
 
-class Extraterrestre extends Jugador{
+export class Extraterrestre extends Jugador{
 
     constructor (nombre){
         super(nombre, (Math.floor(Math.random()*85)+1), 150);

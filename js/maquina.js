@@ -1,6 +1,6 @@
 import { Jugador } from "./jugador.js";
 
-class Maquina extends Jugador{
+export class Maquina extends Jugador{
 
     
     constructor (nombre){
