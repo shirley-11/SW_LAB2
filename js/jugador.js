@@ -1,8 +1,8 @@
 export class Jugador {
-    #miNombre;
+    nombre;
 
     constructor(miNombre, fuerza, salud) {
-        this.#miNombre = miNombre;
+        this.nombre = miNombre;
         this.fuerza = fuerza;
         this.salud = salud;
     }
@@ -15,8 +15,6 @@ export class Jugador {
         }
     }
 
-    getNombre(){
-        return this.#miNombre;
-    }
+
 
 }

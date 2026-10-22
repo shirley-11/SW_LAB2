@@ -14,6 +14,7 @@ const shuffleArray = array => {
     }
 }
 
+
 // Inicializar un único array con 50 maquinas, 50 humanos y 50 extraterrestres
 let campo = []
 for (let i = 1; i<=50; i++){
@@ -32,12 +33,20 @@ console.log(campo)
 let turno =1
 
 // Mientras quede mas de un jugador en el array pelear por parejas
-// while....
+while (campo.length > 1){
     console.log(`Turno: ${turno}`)
-    // Pelear por parejas. Si los elementos que quedan en el array son impares, el último no pelea
+    // Pelear por parejas. Si los elementos que quedan en el array son impares, 
+    // el último no pelea
+    for (let i = 0; i < campo.length - 1; i += 2) {
+        campo[i].luchar(campo[i + 1]);
+        
+    }
     // eliminar los que se quedan fuera
+    campo = campo.filter( j => j.salud>0);
+    console.log('Ganadores ' + campo.map(j => j.nombre).join(','))
     // ordernar
+    campo.shuffleArray;
     turno++
-
+}
 // Imprimir campeón. Unico elemento que queda en el array
 console.log("Campeón: " + campo[0].nombre) 
