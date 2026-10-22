@@ -18,6 +18,8 @@ const shuffleArray = array => {
 let campo = []
 for (let i = 1; i<=50; i++){
     campo.push(new Humano("h"+i));
+    campo.push(new Maquina("m"+i));
+    campo.push(new Extraterrestre("e"+i));
 }
 
 // Ordenar los elementos del array al azar
